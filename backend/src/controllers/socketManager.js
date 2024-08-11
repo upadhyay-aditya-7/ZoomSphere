@@ -26,7 +26,7 @@ export const connectToSocket = (server) => {
       for (let a = 0; a < connections[path].length; a++) {
         io.to(connections[path][a]).emit(
           "user-joined",
-          socket - id,
+          socket.id,
           connections[path]
         );
       }
